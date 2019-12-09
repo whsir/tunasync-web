@@ -1,0 +1,53 @@
+[epel]
+name=Extra Packages for Enterprise Linux 7 - $basearch
+baseurl=https://URL/epel/7/$basearch
+#mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=epel-7&arch=$basearch
+failovermethod=priority
+enabled=1
+gpgcheck=1
+gpgkey=http://URL/epel/RPM-GPG-KEY-EPEL-7
+
+[epel-debuginfo]
+name=Extra Packages for Enterprise Linux 7 - $basearch - Debug
+baseurl=https://URL/epel/7/$basearch/debug
+#mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=epel-debug-7&arch=$basearch
+failovermethod=priority
+enabled=0
+gpgkey=http://URL/epel/RPM-GPG-KEY-EPEL-7
+gpgcheck=1
+
+[epel-source]
+name=Extra Packages for Enterprise Linux 7 - $basearch - Source
+baseurl=https://URL/epel/7/SRPMS
+#mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=epel-source-7&arch=$basearch
+failovermethod=priority
+enabled=0
+gpgkey=http://URL/epel/RPM-GPG-KEY-EPEL-7
+gpgcheck=1
+
+[epel-testing]
+name=Extra Packages for Enterprise Linux 7 - Testing - $basearch
+baseurl=http://URL/epel/testing/7/$basearch
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=testing-epel7&arch=$basearch
+failovermethod=priority
+enabled=0
+gpgcheck=1
+gpgkey=http://URL/epel/RPM-GPG-KEY-EPEL-7
+
+[epel-testing-debuginfo]
+name=Extra Packages for Enterprise Linux 7 - Testing - $basearch - Debug
+baseurl=http://URL/epel/testing/7/$basearch/debug
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=testing-debug-epel7&arch=$basearch
+failovermethod=priority
+enabled=0
+gpgkey=http://URL/epel/RPM-GPG-KEY-EPEL-7
+gpgcheck=1
+
+[epel-testing-source]
+name=Extra Packages for Enterprise Linux 7 - Testing - $basearch - Source
+baseurl=http://URL/epel/testing/7/SRPMS
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=testing-source-epel7&arch=$basearch
+failovermethod=priority
+enabled=0
+gpgkey=http://URL/epel/RPM-GPG-KEY-EPEL-7
+gpgcheck=1

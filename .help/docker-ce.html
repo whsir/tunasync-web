@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Docker-CE 镜像使用帮助</title>
+    <link rel="stylesheet" type="text/css" href="/.resource/css/mirror.css" media="screen" />
+</head>
+<body>
+
+<h1>Docker-CE 镜像使用帮助</h1>
+
+<div id="mirror-data">
+    <h3>说明</h3>
+    <p>
+        本镜像只提供 Debian/Ubuntu/Fedora/CentOS/RHEL 的 docker 软件包，非 dockerhub
+    </p>
+</div>
+
+<div id="mirror-usage">
+    <h3>CentOS/RHEL/Fedora 用户</h3>
+    <p>如果你之前安装过 docker，请先删掉</p>
+    <pre>
+yum remove docker docker-common docker-selinux docker-engine</pre>
+    <p>安装一些依赖</p>
+	<pre>
+yum install -y yum-utils device-mapper-persistent-data lvm2</pre>
+    <p>下载对应版本repo文件, 放入/etc/yum.repos.d/</p>
+    <ul>
+        <li><a href="/.help/docker-ce.repo">CentOS7/Redhat7</a></li>
+        <li><a href="/.help/docker-ce-fedora.repo">Fedora</a></li>
+    </ul>
+	<p>设置镜像源URL，例如：镜像URL地址为192.168.1.205时</p>
+	<pre>
+方法一：
+echo "192.168.1.205 URL" >> /etc/hosts
+方法二：
+sed -i s#URL#192.168.1.205# /etc/yum.repos.d/docker-ce.repo</pre>
+    <p>运行以下命令更新软件包缓存</p>
+    <pre>
+yum clean all
+yum makecache</pre>
+    <p>最后安装docker-ce</p>
+	<pre>
+yum install docker-ce</pre>
+    <p></p>
+    <p></p>
+</div>
+
+<div id="mirror-usage">
+    <h3>Debian 用户</h3>
+	<p>如果你之前安装过 docker，请先删掉</p>
+    <pre>
+apt-get remove docker docker-engine docker.io</pre>
+    <p>安装一些依赖</p>
+	<pre>
+apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common</pre>
+    <p>信任 Docker 的 GPG 公钥:请将以下URL替换成镜像源地址或增加hosts</p>
+    <pre>
+curl -fsSL http://URL/linux/debian/gpg | sudo apt-key add -</pre>
+    <p>对于 amd64 架构的计算机，添加软件仓库:</p>
+	<pre>
+sudo add-apt-repository \
+   "deb [arch=amd64] http://URL/docker-ce/linux/debian \
+   $(lsb_release -cs) \
+   stable"</pre>
+    <p>如果你是树莓派或其它ARM架构计算机，请运行:</p>
+    <pre>
+echo "deb [arch=armhf] http://URL/docker-ce/linux/debian \
+     $(lsb_release -cs) stable" | \
+    sudo tee /etc/apt/sources.list.d/docker.list</pre>
+    <p>最后安装docker-ce</p>
+    <pre>
+apt-get update
+apt-get install docker-ce</pre>
+    <p></p>
+    <p></p>
+</div>
+
+<div id="mirror-usage">
+    <h3>Ubuntu 用户</h3>
+	<p>如果你之前安装过 docker，请先删掉</p>
+    <pre>
+apt-get remove docker docker-engine docker.io</pre>
+    <p>安装一些依赖</p>
+	<pre>
+apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common</pre>
+    <p>信任 Docker 的 GPG 公钥:请将以下URL替换成镜像源地址或增加hosts</p>
+    <pre>
+curl -fsSL http://URL/linux/ubuntu/gpg | sudo apt-key add -</pre>
+    <p>对于 amd64 架构的计算机，添加软件仓库:</p>
+	<pre>
+sudo add-apt-repository \
+   "deb [arch=amd64] http://URL/docker-ce/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"</pre>
+    <p>如果你是树莓派或其它ARM架构计算机，请运行:</p>
+    <pre>
+echo "deb [arch=armhf] http://URL/docker-ce/linux/ubuntu \
+     $(lsb_release -cs) stable" | \
+    sudo tee /etc/apt/sources.list.d/docker.list</pre>
+    <p>最后安装docker-ce</p>
+    <pre>
+apt-get update
+apt-get install docker-ce</pre>
+    <p></p>
+    <p></p>
+</div>
+
+</body>
+</html>

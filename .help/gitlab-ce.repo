@@ -1,0 +1,5 @@
+[gitlab-ce]
+name=gitlab-ce
+baseurl=http://URL/gitlab-ce/yum/el$releasever
+gpgcheck=0
+enabled=1
