@@ -1,2 +1,2 @@
 # tunasync前端web
-# 原版来自 https://github.com/weyo/mirrors
+## 基于https://github.com/weyo/mirrors添加修改，感谢原作者
