@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>RubyGems 镜像使用帮助</title>
+    <link rel="stylesheet" type="text/css" href="/.resource/css/mirror.css" media="screen" />
+</head>
+<body>
+
+<h1>RubyGems 镜像使用帮助</h1>
+
+<div id="mirror-usage">
+    <h3>gem 使用说明</h3>
+	<p>使用以下命令替换 gems 默认源，请将以下URL替换成镜像源地址或增加hosts</p>
+	<pre>
+gem sources --add http://URL/rubygems/ --remove https://rubygems.org/</pre>
+    <p>列出已有源</p>
+    <pre>
+gem sources -l</pre>
+    <p></p>
+    <p></p>
+</div>
+
+<div id="mirror-usage">
+    <h3>bundler 使用说明</h3>
+	<p>使用以下命令替换 bundler 默认源，请将以下URL替换成镜像源地址或增加hosts</p>
+	<pre>
+bash bundle config mirror.https://rubygems.org http://URL/rubygems</pre>
+    <p>官方文档： http://bundler.io/v1.16/man/bundle-config.1.html#MIRRORS-OF-GEM-SOURCES</p>
+	<p></p>
+    <p></p>
+</div>
+
+</body>
+</html>
