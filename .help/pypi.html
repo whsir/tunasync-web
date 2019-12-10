@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>pypi 镜像使用帮助</title>
+    <link rel="stylesheet" type="text/css" href="/.resource/css/mirror.css" media="screen" />
+</head>
+<body>
+
+<h1>CentOS/Redhat 镜像使用帮助</h1>
+
+<div id="mirror-data">
+    <h3>收录版本</h3>
+    <ul>
+        <p>官方支持的所有版本</p>
+    </ul>
+</div>
+
+<div id="mirror-usage">
+    <h3>使用说明</h3>
+	<h4>一、临时使用</h4>
+    <p>使用pip的时候在后面加上-i参数，指定pip源，请将以下URL替换成镜像源地址或增加hosts</p>
+    <pre>
+pip install xxx -i http://URL/pypi/simple/</pre>
+    <p>替换“xxx”为你需要安装的模块名称。</p>
+	<h4>二、永久修改使用</h4>
+	<p>Linux/Unix中使用：</p>
+	<pre>
+~/.pip/pip.conf</pre>
+    <p>添加或修改pip.conf（如果不存在，创建一个）</p>
+    <pre>
+[global]
+index-url = http://URL/pypi/simple/</pre>
+	<p>Windows中使用：</p>
+	<pre>
+%APPDATA%/pip/pip.ini</pre>
+    <p>1.打开此电脑，在最上面的的文件夹窗口输入：%APPDATA%</p>
+    <p>2.按回车跳转进入目录，并新建一个文件夹：pip</p>
+    <p>3.创建文件：pip.ini</p>
+    <p>添加或修改pip.ini（如果不存在，创建一个）</p>
+    <pre>
+[global]
+index-url = http://URL/pypi/simple/</pre>
+    <p></p>
+    <p></p>
+</div>
+
+</body>
+</html>
