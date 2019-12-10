@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>WLNMP 镜像使用帮助</title>
+    <link rel="stylesheet" type="text/css" href="/.resource/css/mirror.css" media="screen" />
+</head>
+<body>
+
+<h1>WLNMP 镜像使用帮助</h1>
+
+<div id="mirror-data">
+    <h3>说明</h3>
+    <p>
+        WLNMP是一个基于官方源码二次打包的项目，可以在CentOS/RadHat系统上通过yum源快速部署Nginx/Mysql/PHP等常用服务
+    </p>
+</div>
+
+<div id="mirror-usage">
+    <h3>使用说明</h3>
+    <p>下载repo文件, 放入/etc/yum.repos.d/</p>
+    <ul>
+        <li><a href="/.help/wlnmp-release-centos.repo">CentOS/Redhat</a></li>
+    </ul>
+	<p>设置镜像源URL，例如：镜像URL地址为192.168.1.205时</p>
+	<pre>
+方法一：
+echo "192.168.1.205 URL" >> /etc/hosts
+方法二：
+sed -i s#URL#192.168.1.205# /etc/yum.repos.d/wlnmp-release-centos.repo</pre>
+    <p>运行以下命令更新软件包缓存</p>
+    <pre>
+yum clean all
+yum makecache</pre>
+    <p>官方地址：<a href="https://www.wlnmp.com/" target="_blank">https://www.wlnmp.com/</a></p>
+    <p></p>
+    <p></p>
+</div>
+
+</body>
+</html>
