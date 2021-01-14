@@ -10,6 +10,7 @@ Get Started
 - [中文文档](https://github.com/whsir/tunasync-web/docs/zh_CN)
 - [English](https://github.com/whsir/tunasync-web/docs/en)
 
+通过tunasync搭建镜像仓库(https://blog.whsir.com/post-5094.html)
 
 Thank for
 ===================
